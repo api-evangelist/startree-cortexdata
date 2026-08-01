@@ -1,0 +1,32 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/orgs/startreedata/repositories
+packages:
+  - language: go
+    registry: pkg.go.dev
+    name: github.com/startreedata/pinot-client-go
+    url: https://github.com/startreedata/pinot-client-go
+    install: go get github.com/startreedata/pinot-client-go
+    official: true
+    notes: Apache Pinot Golang client managed by StarTree.
+  - language: python
+    registry: pypi
+    name: pinotdb
+    url: https://github.com/startreedata/pinot-dbapi
+    install: pip install pinotdb
+    official: true
+    notes: Python DB-API 2.0 and SQLAlchemy dialect for Apache Pinot / StarTree Cloud.
+  - language: ruby
+    registry: rubygems
+    name: pinot-client
+    url: https://github.com/startreedata/ruby-pinot-client
+    install: gem install pinot-client
+    official: true
+    notes: Ruby Apache Pinot client library.
+  - language: python
+    registry: pypi
+    name: thirdeye-client
+    url: https://github.com/startreedata/thirdeye-client-python
+    install: pip install thirdeye-client
+    official: true
+    notes: Python client for the StarTree ThirdEye monitoring platform.

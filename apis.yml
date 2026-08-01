@@ -1,8 +1,27 @@
 aid: startree-cortexdata
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/startree-cortexdata.png
 name: StarTree (Cortexdata)
-description: 'StarTree (Cortexdata) is a company surfaced as a portfolio company of bain-capital-ventures
-  and added to the API Evangelist network as a stub for enrichment. Sector: ai-infrastructure. This profile
-  is a lead awaiting the enrichment pipeline.'
+description: >-
+  StarTree is a real-time analytics company founded by the creators of Apache
+  Pinot. Its managed StarTree Cloud platform ingests streaming and batch data
+  (Kafka, Confluent, S3, GCS, Iceberg and more), models it, and serves
+  sub-second, high-concurrency SQL analytics for customer-facing, agent-facing,
+  and operational use cases via a console, client libraries, and REST APIs.
+  StarTree Cloud runs as SaaS, BYOC, or BYOK, adds indexing, tiered storage,
+  RBAC/SSO, and SOC 2 + ISO 27001 security, and includes the ThirdEye anomaly
+  detection product. Authenticated with a console-issued Bearer JWT.
 url: https://raw.githubusercontent.com/api-evangelist/startree-cortexdata/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,16 +31,85 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
 - Ai Infrastructure
-apis: []
+- Real-Time Analytics
+- Apache Pinot
+- OLAP
+- Analytics
+- Streaming Data
+- Database
+apis:
+- aid: startree-cortexdata:startree-cortexdata-query-api-api
+  name: StarTree (Cortexdata) Query API API
+  description: The Query API API from StarTree (Cortexdata) — 1 operation(s) for query api.
+  humanURL: https://docs.startree.ai/api-reference/introduction
+  baseURL: https://broker.pinot.celpxu.cp.s7e.startree.cloud
+  tags:
+  - Query API
+  properties:
+  - type: OpenAPI
+    url: openapi/startree-cortexdata-query-api-api-openapi.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: Authentication
+  url: authentication/startree-cortexdata-authentication.yml
+- type: VulnerabilityDisclosure
+  url: security/startree-cortexdata-vulnerability-disclosure.yml
+- type: Security
+  url: https://startree.ai/responsible-disclosure/
+- type: DomainSecurity
+  url: security/startree-cortexdata-domain-security.yml
+- type: Packages
+  url: packages/startree-cortexdata-packages.yml
+- type: SDKs
+  url: packages/startree-cortexdata-packages.yml
+- type: MCPServer
+  url: mcp/startree-cortexdata-mcp.yml
+- type: LLMsTxt
+  url: llms/startree-cortexdata-llms.txt
+- type: Conformance
+  url: conformance/startree-cortexdata-conformance.yml
+- type: Compliance
+  url: https://www.startree.ai/products/startree-cloud/
+- type: Lifecycle
+  url: lifecycle/startree-cortexdata-lifecycle.yml
+- type: ChangeLog
+  url: changelog/startree-cortexdata-changelog.yml
+- type: Conventions
+  url: conventions/startree-cortexdata-conventions.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: DeveloperPortal
+  url: https://docs.startree.ai/
+- type: Documentation
+  url: https://docs.startree.ai/
+- type: APIReference
+  url: https://docs.startree.ai/api-reference/introduction
+- type: GitHubOrganization
+  url: https://github.com/startreedata
+- type: Support
+  url: https://support.startree.ai/
+- type: Blog
+  url: https://startree.ai/resources/
+- type: Pricing
+  url: https://startree.ai/pricing/
+- type: Login
+  url: https://startree.cloud/login
+- type: TermsOfService
+  url: https://startree.ai/terms-conditions
+- type: PrivacyPolicy
+  url: https://startree.ai/privacy-policy
 - type: Website
   url: https://www.startree.ai/
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 15
+  pass: local-v1

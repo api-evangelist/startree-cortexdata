@@ -1,0 +1,22 @@
+generated: '2026-07-21'
+method: searched
+source: https://www.startree.ai/products/startree-cloud/
+standards:
+  - id: oauth2
+    conforms: false
+    evidence: OpenAPI declares http bearer (JWT) auth, not an oauth2 scheme.
+  - id: bearer-jwt
+    conforms: true
+    evidence: securitySchemes.bearerAuth type=http scheme=bearer bearerFormat=JWT.
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: No application/problem+json responses declared in the published spec.
+  - id: soc2
+    conforms: true
+    evidence: StarTree publicly states SOC 2 compliance for StarTree Cloud.
+  - id: iso-27001
+    conforms: true
+    evidence: StarTree publicly states ISO 27001 certification for StarTree Cloud.
+compliance:
+  programs: [SOC 2, ISO 27001]
+  source: https://www.startree.ai/products/startree-cloud/

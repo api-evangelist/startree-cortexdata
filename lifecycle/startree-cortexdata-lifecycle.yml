@@ -1,0 +1,19 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.startree.ai/reference/startree-release-notes
+versioning:
+  scheme: semver
+  current: 0.15.0
+  docs: https://docs.startree.ai/reference/startree-release-notes
+deprecation:
+  policy_url: null
+  sunset_header: null
+  notes: No formal deprecation/sunset policy published as of this pass.
+sla:
+  url: null
+status_page: null
+deprecated_operations: []
+notes: >-
+  StarTree Cloud publishes dated semantic-version release notes. No public
+  status page (status.startree.* does not resolve) and no formal deprecation
+  policy were found during this pass.

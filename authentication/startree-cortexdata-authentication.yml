@@ -1,0 +1,19 @@
+generated: '2026-07-21'
+method: searched
+source: openapi/startree-cortexdata-query-openapi.json
+docs: https://docs.startree.ai/api-reference/introduction
+notes: >-
+  StarTree Cloud authenticates with a Bearer token (JWT) generated in the
+  console under API Access. The token must be included on every request. A
+  `database` HTTP header carries the Workspace ID (e.g. ws_2kc8e2dnzzb0) for
+  multi-tenant (Free Tier) clusters; it is not required for dedicated clusters.
+summary:
+  types:
+  - http
+schemes:
+- name: bearerAuth
+  type: http
+  scheme: bearer
+  bearerFormat: JWT
+  sources:
+  - openapi/startree-cortexdata-query-openapi.json

@@ -1,0 +1,27 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.startree.ai/api-reference/introduction
+authentication:
+  style: bearer-jwt
+  detail: Bearer token (JWT) generated in the console under API Access; sent on every request.
+  ref: authentication/startree-cortexdata-authentication.yml
+multi_tenancy:
+  header: database
+  value: Workspace ID (e.g. ws_2kc8e2dnzzb0)
+  detail: Required on multi-tenant / Free Tier clusters; omit on dedicated clusters.
+idempotency:
+  supported: false
+  detail: No idempotency-key header/param is documented; the Query API is read-only SQL execution.
+pagination:
+  style: sql
+  detail: Result windowing is done in SQL (LIMIT/OFFSET) rather than a wire pagination convention.
+response_envelope:
+  shape: resultTable
+  fields: [resultTable.dataSchema.columnNames, resultTable.dataSchema.columnDataTypes, resultTable.rows]
+  detail: Query responses return a resultTable with a dataSchema (column names/types) and a rows array.
+versioning:
+  ref: lifecycle/startree-cortexdata-lifecycle.yml
+notes: >-
+  Cross-cutting semantics derived from the StarTree Cloud Query API spec and the
+  API reference introduction. Broader Pinot Controller endpoints (tables,
+  segments, tenants, ingestion) are documented at docs.startree.ai/api-reference.
