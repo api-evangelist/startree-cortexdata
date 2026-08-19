@@ -6,14 +6,18 @@ server:
   name: mcp-pinot
   transport: stdio
   repo: https://github.com/startreedata/mcp-pinot
-  description: >-
-    Open-source Model Context Protocol server for Apache Pinot / StarTree Cloud,
-    maintained in the StarTree (startreedata) GitHub org. Lets Claude and other
-    MCP-compatible clients query a Pinot cluster over natural language / SQL.
+  description: Open-source Model Context Protocol server for Apache Pinot / StarTree Cloud, maintained
+    in the StarTree (startreedata) GitHub org. Lets Claude and other MCP-compatible clients query a Pinot
+    cluster over natural language / SQL.
 tools:
-  - name: query
-    description: Execute a SQL query against the Pinot/StarTree broker.
-    source_operation: openapi/startree-cortexdata-query-openapi.json#executeQuery
-notes: >-
-  Self-hosted (run locally against your cluster) rather than a StarTree-hosted
-  remote endpoint; no vendor-hosted MCP URL is published.
+- name: query
+  description: Execute a SQL query against the Pinot/StarTree broker.
+  source_operation: openapi/startree-cortexdata-query-openapi.json#executeQuery
+notes: Self-hosted (run locally against your cluster) rather than a StarTree-hosted remote endpoint; no
+  vendor-hosted MCP URL is published.
+deployment:
+  mode: local-stdio
+  verified: searched
+  tools: 1
+  checked: '2026-08-12'
+  source: catalog MCP census
