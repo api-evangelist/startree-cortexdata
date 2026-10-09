@@ -7,14 +7,17 @@ front_door_ai:
   probed_at: '2026-09-17'
   host: www.startree.ai
   final_host: startree.ai
-  ownership: inherited
+  ownership: own
   owner: startree-cortexdata
   shares_host_with: null
-  inherited_from: startree.ai
+  inherited_from: null
+  alias_of: startree.ai
   verdict: scored
-  score: null
+  score: 5
+  band: 4
+  band_label: moderate
   host_score: 5
-  density: null
+  density: 4.56
   words: 1097
   tiers:
     agentic: 1
